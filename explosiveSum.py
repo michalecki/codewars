@@ -1,4 +1,4 @@
-def exp_sum(n):
+def exp_sum(n,memo = {}):
     '''
     From wikipedia: https://en.wikipedia.org/wiki/Partition_(number_theory)#
 
@@ -12,43 +12,52 @@ def exp_sum(n):
     2 + 2
     2 + 1 + 1
     1 + 1 + 1 + 1
+    :param memo: saving the already calculated value
     :param n: int
     :return: integer partition, int
     '''
 
-#solution works but fails on time
-    # partition = int()
-    # if n == 1: return 1
-    # if n == 0: return 1
-    # if n<0 : return 0
-    # k=1
-    # count=0
-    #
-    # krange = ((24*n+1)**(1/2)+1)/6
-# #recurrent formula from wikipedia
-    # while  -krange <= k <= krange:
-    #
-    #     if count % 2 == 1:
-    #         k *= -1
-    #
-    #     partition += (-1)**(k+1)*exp_sum(n-k*(3*k-1)/2)
-    #
-    #     if count % 2 == 1:
-    #         k = -k+1
-    #     count += 1
-    #
-    # return partition
 
-    if -krange <= k <= krange:
-        if count % 2 == 1:
-            k *= -1
+    partition = int()
+    if n == 1: return 1
+    if n == 0: return 1
+    if n<0 : return 0
+#adding the dictionary keeping the calculated values
+#use it if already calculated
+    try:
+        return memo[n]
+    except KeyError:
 
-        partition += (-1)**(k+1)*exp_sum(n-k*(3*k-1)/2)
+        k=1
+        count=0
 
-        if count % 2 == 1:
-            k = -k+1
-        count += 1
+        krange = ((24*n+1)**(1/2)+1)/6
+    #recurrent formula from wikipedia
+        while  -krange <= k <= krange:
+
+            if count % 2 == 1:
+                k *= -1
+
+            partition += (-1)**(k+1)*exp_sum(n-k*(3*k-1)/2)
+
+            if count % 2 == 1:
+                k = -k+1
+            count += 1
+        memo[n] = partition
+        return partition
+
+# #some more clever and neat solution
+# def exp_sum(n):
+#   if n < 0:
+#     return 0
+#   dp = [1]+[0]*n
+#   # print(dp)
+#   for num in range(1,n+1):
+#     for i in range(num,n+1):
+#       dp[i] += dp[i-num]
+#       # print(dp)
+#   return dp[-1]
 
 # testing
 # exp_sum(5)
-print(exp_sum(6))
+print(exp_sum(5))
