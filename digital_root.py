@@ -17,9 +17,9 @@ def digital_root(n):
         n = sums_digits(n)
     return n
 
-#better solution
+#prettier solution
     #map(function,iterable) applies a function to each iterable
-    return n if n < 10 else digital_root(sum(map(int, str(n))))
+    # return n if n < 10 else digital_root(sum(map(int, str(n))))
 
 
 #some testing

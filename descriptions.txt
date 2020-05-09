@@ -1,0 +1,43 @@
+CarRentalBusinessNeedsStatisticsandProgramming.py
+    implements a probability distribution function and returns probability of
+    a desired value basing on an average value
+PeteTheBaker.py
+    takes a recipe and available provisions, return possible amount
+HumanReadableTime.py
+    takes seconds, returns formatted time
+CalculatingwithFunctions.py
+    seven(minus(three())) type calculator
+sum_of_numbers.py
+    Given two integers a and b, which can be positive or negative,
+    find the sum of all the numbers between including them too and return it.
+SimplePigLatin.py
+    Move the first letter of each word to the end of it, then add "ay" to the end of the word.
+    Leave punctuation marks untouched.
+descriptions.txt
+    this file
+digital_root.py
+     Recursive sum of all the digits in a number
+make_filelist.py
+    makes a list of files in the folder and appends if any new one appeared
+Vasya _Clerk.py
+    Checks if Vasya can give change to the clients
+StripComments.py
+    removes the text to the end of the line past one of the specified markers
+Multiplesof3or5.py
+    returns the sum of all the multiples of 3 or 5 below the number passed in
+duplicate_ecoder.py
+    The goal of this exercise is to convert a string to a new string where each character
+    in the new string is "(" if that character appears only once in the original string,
+     or ")" if that character appears more than once in the original string.
+stopGninnipsMySdrow.py
+     takes in a string of one or more words, and returns the same string, but with all five
+     or more letter words reversed (Just like the name of this Kata). Strings passed in will consist
+     of only letters and spaces. Spaces will be included only when more than one word is present.
+FilteringValuesForanElection.py
+    remove from the input list of integers the ones that are further from the mean than 2.5*pstdev
+ValidParentheses.py
+    takes a string of parentheses, and determines if the order of the parentheses is valid.
+explosiveSum.py
+    recursive problem with memonization
+calculator.py
+    calculating the value of expression
